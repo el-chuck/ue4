@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main()
+void PrintIntro()
 {
 	constexpr int WORD_LENGTH = 5;
 
@@ -11,7 +11,15 @@ int main()
 	cout << "Welcome to Bulls and Cows, a fun word game.\n";
 	cout << "Can you guess the " << WORD_LENGTH;
 	cout << " letter isogram i'm thinking of?\n\n";
-	
+
+	return;
+}
+
+// the entry point for our application
+int main()
+{
+	PrintIntro();
+
 	// read player guess
 	string Guess = "";
 	cout << "What is your guess?";
