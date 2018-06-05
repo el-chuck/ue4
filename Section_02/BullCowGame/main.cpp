@@ -12,8 +12,11 @@ int main()
 {
 	PrintIntro();
 
-	GetGuessAndPrintBack();
-	GetGuessAndPrintBack();
+	constexpr int AMOUNT_OF_GUESSES = 5;
+	for (int i = 1; i <= AMOUNT_OF_GUESSES; i++)
+	{
+		GetGuessAndPrintBack();
+	}
 
 	return 0;
 }
@@ -36,11 +39,11 @@ string GetGuessAndPrintBack()
 {
 	// read player guess
 	string Guess = "";
-	cout << "What is your guess?";
+	cout << "What is your guess? ";
 	getline(cin, Guess);
 	
 	// repeat back player guess
-	cout << "Your guess is: " << Guess << endl;
+	cout << "Your guess is: " << Guess << endl << endl;
 	
 	return Guess;
 }
