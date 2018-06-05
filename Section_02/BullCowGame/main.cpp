@@ -5,26 +5,20 @@ using namespace std;
 
 void PrintIntro();
 
-string GetGuess();
+string GetGuessAndPrintBack();
 
 // the entry point for our application
 int main()
 {
 	PrintIntro();
 
-	string Guess = GetGuess();
+	GetGuessAndPrintBack();
+	GetGuessAndPrintBack();
 
-	// repeat back player guess
-	cout << "Your guess is: " << Guess << endl;
-
-	Guess = GetGuess();
-
-	// repeat back player guess
-	cout << "Your guess is: " << Guess << endl;
-	
 	return 0;
 }
 
+// print introduction message to player
 void PrintIntro()
 {
 	constexpr int WORD_LENGTH = 5;
@@ -37,11 +31,16 @@ void PrintIntro()
 	return;
 }
 
-string GetGuess()
+// get the players guess and print it to the screen
+string GetGuessAndPrintBack()
 {
 	// read player guess
 	string Guess = "";
 	cout << "What is your guess?";
 	getline(cin, Guess);
+	
+	// repeat back player guess
+	cout << "Your guess is: " << Guess << endl;
+	
 	return Guess;
 }
