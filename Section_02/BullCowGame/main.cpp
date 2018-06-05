@@ -68,8 +68,5 @@ bool AskToPlayAgain()
 	string Response = "";
 	getline(cin, Response);
 
-	cout << "Is this y? " << (Response[0] == 'y');
-	cout << endl;
-
-	return false;
+	return Response[0] == 'y' || Response[0] == 'Y';
 }
