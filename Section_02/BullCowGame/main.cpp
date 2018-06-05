@@ -13,8 +13,10 @@ bool AskToPlayAgain();
 int main()
 {
 	PrintIntro();
-	PlayGame();
-	AskToPlayAgain();
+
+	do {
+		PlayGame();
+	} while (AskToPlayAgain());
 
 	return 0;
 }
