@@ -16,6 +16,7 @@ int main()
 	for (int i = 1; i <= AMOUNT_OF_GUESSES; i++)
 	{
 		GetGuessAndPrintBack();
+		cout << endl;
 	}
 
 	return 0;
@@ -43,7 +44,7 @@ string GetGuessAndPrintBack()
 	getline(cin, Guess);
 	
 	// repeat back player guess
-	cout << "Your guess is: " << Guess << endl << endl;
+	cout << "Your guess is: " << Guess << endl;
 	
 	return Guess;
 }
