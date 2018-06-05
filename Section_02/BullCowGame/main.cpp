@@ -5,22 +5,19 @@ using namespace std;
 
 void PrintIntro();
 
+string GetGuess();
+
 // the entry point for our application
 int main()
 {
 	PrintIntro();
 
-	// read player guess
-	string Guess = "";
-	cout << "What is your guess?";
-	getline(cin, Guess);
+	string Guess = GetGuess();
 
 	// repeat back player guess
 	cout << "Your guess is: " << Guess << endl;
 
-	// read player guess
-	cout << "What is your guess? ";
-	getline(cin, Guess);
+	Guess = GetGuess();
 
 	// repeat back player guess
 	cout << "Your guess is: " << Guess << endl;
@@ -38,4 +35,13 @@ void PrintIntro()
 	cout << " letter isogram i'm thinking of?\n\n";
 
 	return;
+}
+
+string GetGuess()
+{
+	// read player guess
+	string Guess = "";
+	cout << "What is your guess?";
+	getline(cin, Guess);
+	return Guess;
 }
