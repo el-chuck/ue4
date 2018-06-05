@@ -5,7 +5,8 @@ using namespace std;
 
 void PrintIntro();
 void PlayGame();
-string GetGuessAndPrintBack();
+string GetGuess();
+void PrintBack(string Guess);
 
 // the entry point for our application
 int main()
@@ -35,21 +36,27 @@ void PlayGame()
 	constexpr int AMOUNT_OF_GUESSES = 5;
 	for (int i = 1; i <= AMOUNT_OF_GUESSES; i++)
 	{
-		GetGuessAndPrintBack();
+		string Guess = GetGuess();
+		PrintBack(Guess);
 		cout << endl;
 	}
 }
 
 // get the players guess and print it to the screen
-string GetGuessAndPrintBack()
+string GetGuess()
 {
 	// read player guess
 	string Guess = "";
 	cout << "What is your guess? ";
 	getline(cin, Guess);
 	
-	// repeat back player guess
-	cout << "Your guess is: " << Guess << endl;
 	
 	return Guess;
+}
+
+void PrintBack(string Guess)
+{
+	// repeat back player guess
+	cout << "Your guess is: " << Guess << endl;
+
 }
